@@ -687,7 +687,7 @@ INFOPRODUCTOS
 
 								}
 
-								echo   '<small>ADICIONAR AL CARRITO</small> 
+								echo   '<small>ADICIONAR A MI PEDIDO</small> 
 
 									<i class="fa fa-shopping-cart col-md-0"></i>
 
@@ -709,7 +709,7 @@ INFOPRODUCTOS
 								}
 
 
-									echo 'ADICIONAR AL CARRITO 
+									echo 'ADICIONAR A MI PEDIDO
 
 									<i class="fa fa-shopping-cart"></i>
 

@@ -51,6 +51,7 @@ header #buscador input{
 
 header #buscador button{
 	padding:9px;
+	height: 39px;
 	border:1px solid silver;
 	border-radius:0;
 }
@@ -67,9 +68,14 @@ header #carrito button{
 
 header #carrito p{
 	padding:2px;
+	height: 39px;
 	padding-left:60px;
 	border:1px solid #aaa;
 	font-size:12px;
+	display: block;
+	padding-top: 10px;
+	align-items: center;
+	justify-content: flex-start;
 }
 
 header #categorias{
