@@ -39,6 +39,43 @@ if(localStorage.getItem("listaProductos") != null){
 	$(".cabeceraCheckout").hide();
 }
 
+// Capturar clic en el botón "Realizar Pedido"
+$(document).on("click", "#btnRealizarPedido", function () {
+    if (listaCarrito.length === 0) {
+        alert("El carrito está vacío. Agrega productos antes de realizar el pedido.");
+        return;
+    }
+
+    // Construir el mensaje para WhatsApp
+    var mensaje = "Hola, quiero Cotizar un pedido con los siguientes productos:%0A";
+
+    listaCarrito.forEach(function (item, index) {
+        mensaje += `${index + 1}. ${item.titulo} - Cantidad: ${item.cantidad}%0A `;
+    });
+
+    
+
+    // Número de WhatsApp (cambiarlo por el tuyo)
+    var numeroWhatsApp = "3007702633";
+
+    // Crear el enlace de redirección a WhatsApp
+    var enlaceWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${mensaje}`;
+
+    // Redirigir al usuario a WhatsApp
+	window.open(enlaceWhatsApp, '_blank');
+
+
+	// **Limpiar el carrito**
+    localStorage.removeItem("listaProductos"); // Borra los datos del carrito del localStorage
+    listaCarrito = []; // Limpia la variable del carrito en la sesión actual
+
+    // Actualizar la interfaz del carrito
+    $(".cuerpoCarrito").html('<div class="well">Aún no hay productos en el carrito de compras.</div>');
+    $(".sumaCarrito").hide();
+    $(".cabeceraCheckout").hide();
+});
+
+
 /*=============================================
 CONFIRMAR PÁGINA DE CARRITO DE COMPRAS
 =============================================*/
@@ -121,7 +158,7 @@ for(var i = 0; i < indice.length; i++){
 
 								'<br>'+
 
-								'<p class="precioCarritoCompra text-center">USD $<span>'+precio+'</span></p>'+
+								'<p class="precioCarritoCompra text-center"> <span>No disponible</span></p>'+
 
 							'</div>'+
 
@@ -147,7 +184,7 @@ for(var i = 0; i < indice.length; i++){
 
 								'<p class="subTotal'+index+' subtotales">'+
 									
-									'<strong>USD $<span>'+(Number(item.cantidad)*Number(precio))+'</span></strong>'+
+									'<strong> <span>No Disnonible</span></strong>'+
 
 								'</p>'+
 

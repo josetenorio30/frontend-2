@@ -91,7 +91,7 @@ TABLA CARRITO DE COMPRAS
 			SUMA DEL TOTAL DE PRODUCTOS
 			======================================-->
 
-			<div class="panel-body sumaCarrito">
+		<!--	<div class="panel-body sumaCarrito">
 
 				<div class="col-md-4 col-sm-6 col-xs-12 pull-right well">
 					
@@ -114,6 +114,7 @@ TABLA CARRITO DE COMPRAS
 				</div>
 
 			</div>
+			 -->
 
 			<!--=====================================
 			BOTÓN CHECKOUT
@@ -123,19 +124,25 @@ TABLA CARRITO DE COMPRAS
 
 			<?php
 
-				if(isset($_SESSION["validarSesion"])){
+			/*	if(isset($_SESSION["validarSesion"])){
 
 					if($_SESSION["validarSesion"] == "ok"){
 
-						echo '<a id="btnCheckout" href="#modalCheckout" data-toggle="modal" idUsuario="'.$_SESSION["id"].'"><button class="btn btn-default backColor btn-lg pull-right">REALIZAR PAGO</button></a>';
+						echo '<a id="btnCheckout" href="#modalCheckout" data-toggle="modal" idUsuario="'.$_SESSION["id"].'"><button class="btn btn-default backColor btn-lg pull-right">REALIZAR PAGOaaaaaaaaaaa</button></a>';
 
 					}
 
 
 				}else{
 
-					echo '<a href="#modalIngreso" data-toggle="modal"><button class="btn btn-default backColor btn-lg pull-right">REALIZAR PAGO</button></a>';
-				}
+					
+				}*/
+
+
+				echo '<a id="btnRealizarPedido">
+						<button class="btn btn-default backColor btn-lg pull-right">Realizar Pedido</button>
+					</a>
+';
 
 			?>	
 
