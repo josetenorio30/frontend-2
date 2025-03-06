@@ -391,14 +391,15 @@ INFOPRODUCTOS
 								</div>';
 
 							}
+								*/
 
-							if($detalles["Marca"]!=null){
+							if( isset($detalles["Marca"])!=null){
 
 								echo '<div class="col-md-3 col-xs-12">
 
 									<select class="form-control seleccionarDetalle" id="seleccionarMarca">
 										
-										<option value="">Marca</option>';
+										<option value="">Seleccione</option>';
 
 										for($i = 0; $i <= count($detalles["Marca"]); $i++){
 
@@ -410,7 +411,7 @@ INFOPRODUCTOS
 
 								</div>';
 
-							}*/
+							}
 
 						}else{
 
