@@ -393,6 +393,9 @@ INFOPRODUCTOS
 							}
 								*/
 
+
+								
+
 							if( isset($detalles["Marca"])!=null){
 
 								echo '<div class="col-md-3 col-xs-12">
